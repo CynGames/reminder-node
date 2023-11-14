@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+#  app:
+#    build: .
+#    ports:
+#      - "8080:8080"
+#    volumes:
+#      - .:/app
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "8001:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
